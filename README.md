@@ -2,27 +2,31 @@
 
 Plugin do Claude Code para fazer vídeos POV (mãos + produto) com IA para o TikTok Shop.
 Roteiro da Vyral ou vídeo viral de referência → imagem base e takes no Google Flow → narração com legenda palavra por palavra → edição no FFmpeg.
+Tudo incluído: banco de prompts, imagem base (cama + mãos), scripts e o playbook.
 
-## Instalar (uma vez)
+## Para você (humano)
 
-1. Pré-requisitos (Windows):
+Cole no Claude Code:
+
+> Instala o plugin https://github.com/lucas907dcomp/videos-pov-tiktok e vamos começar
+
+Precisa só de: Claude Code logado, Google Chrome com a extensão Claude in Chrome, e sua conta do Google Flow.
+
+## Para o Claude Code que está lendo isto
+
+1. Instale o plugin pelo terminal:
    ```
-   winget install Gyan.FFmpeg
-   pip install edge-tts "yt-dlp[default,curl-cffi]"
+   claude plugin marketplace add lucas907dcomp/videos-pov-tiktok
+   claude plugin install videos-pov@videos-pov
    ```
-   Também: Git for Windows (o Claude Code já usa), extensão Claude in Chrome, conta no Google Flow e acesso à biblioteca VSA e ao doc de prompts.
-2. No Claude Code:
-   ```
-   /plugin marketplace add lucas907dcomp/videos-pov-tiktok
-   /plugin install videos-pov@videos-pov
-   ```
-   O repositório é privado: sua conta do GitHub precisa ter sido convidada, e o git precisa estar logado nela (`gh auth login`).
-3. Reinicie o Claude Code e peça: "vamos fazer um vídeo POV". Na primeira vez ele monta seu perfil em `~/.claude/videos-pov/perfil.md` (sua mão, seu cenário, seu projeto do Flow).
+2. Peça para o usuário reiniciar o Claude Code (o plugin carrega no início da sessão) e dizer "vamos começar".
+3. Na sessão nova, a skill `videos-pov-tiktok-shop` faz o resto, começando pela seção "Primeira vez nesta máquina".
 
 ## Atualizar
 
+O Lucas publica melhorias aqui. Para receber:
 ```
-/plugin marketplace update videos-pov
+claude plugin marketplace update videos-pov
+claude plugin update videos-pov@videos-pov
 ```
-Depois reinicie o Claude Code. Ou ative a atualização automática em `/plugin` → Marketplaces → videos-pov.
-Seu perfil não é tocado pela atualização.
+e reinicie o Claude Code.

@@ -7,36 +7,37 @@ description: "Vídeos POV (mãos + produto) para TikTok Shop com IA: roteiro da 
 
 Use quando o usuário mandar um roteiro da Vyral (blocos GANCHO / DESENVOLVIMENTO / PROVA / OBJEÇÃO / CTA) ou o link de um vídeo viral de referência, pedir para planejar as cenas de um vídeo POV ou pedir um prompt de cena.
 
-**Perfil do criador (ler primeiro):** `~/.claude/videos-pov/perfil.md`. Tem a identidade das mãos, o cenário, o projeto do Flow, a pasta dos vídeos e onde ficam playbook e fichas. Se não existir, crie a partir de `perfil-exemplo.md` (nesta skill) perguntando ao usuário só o que faltar. Onde esta skill diz "kit da mão" ou "pasta dos vídeos", vale o que está no perfil.
+Mesma loja, mesmas mãos, mesmo cenário para todos que usam esta skill. Abaixo, `<skill>` = o diretório base desta skill (aparece quando ela carrega).
 
-**Antes de planejar:** leia o playbook (caminho no perfil): o que já sabemos e as hipóteses em teste, e as fichas que já têm métricas. Cada vídeo testa no máximo uma variável nova.
-**Ao entregar o vídeo:** crie a ficha `AAAA-MM-DD-produto.md` (o que foi feito, takes descartados, edição, headline; métricas em 48h e 7 dias). Com 3+ fichas medidas, compare e atualize o playbook.
+## Primeira vez nesta máquina (faça sozinho, sem perguntar)
+Se o usuário disser "vamos começar" ou for o primeiro vídeo:
+1. Confira e instale o que faltar: `ffmpeg -version` (senão `winget install Gyan.FFmpeg`), `python -c "import edge_tts"` (senão `pip install edge-tts`), `python -m yt_dlp --version` (senão `pip install "yt-dlp[default,curl-cffi]"`).
+2. Pasta dos vídeos: `~/tiktok-shop/videos/` (crie se não existir).
+3. Navegador: precisa da extensão Claude in Chrome conectada e do usuário logado no Google Flow (https://flow.google.com). Login é sempre ele quem faz.
+4. Projeto no Flow: se o usuário ainda não tem um projeto com a imagem base, crie um projeto novo e suba `<skill>/imagens/base-maos-cama.jpg` (é a cama + mãos de luva preta + relógio). Pelo `file_upload` da extensão ou pedindo para ele arrastar o arquivo.
+5. Depois peça o produto (link do TikTok Shop) e o roteiro da Vyral ou o link de um vídeo viral de referência.
+
+**Antes de planejar:** leia `<skill>/playbook.md` (o que já sabemos e as hipóteses em teste). Cada vídeo testa no máximo uma variável nova.
+**Ao entregar o vídeo:** crie `ficha.md` na pasta do vídeo (o que foi feito, takes descartados, edição, headline; métricas em 48h e 7 dias). Se existir `~/cerebro/pessoal/tiktok-shop/videos/` (máquina do Lucas), a ficha vai para lá.
 
 **Crítico cego (Gauntlet):** não rode por conta própria, gasta muito token. Só quando o usuário pedir.
 
-**Ferramentas desta skill:** `ferramentas/editar.sh` e `ferramentas/narrar_legenda.py`, no diretório base desta skill (o caminho aparece quando ela carrega). Abaixo, `<skill>` = esse diretório.
+**Ferramentas:** `<skill>/ferramentas/editar.sh` e `<skill>/ferramentas/narrar_legenda.py`.
 
-Responda sempre em português. Os prompts saem em inglês, como na biblioteca (exceto os que já são em português lá).
+Responda sempre em português. Os prompts saem em inglês, como no original (exceto os que já são em português).
 
-## Fontes dos prompts
+## Fonte dos prompts: `<skill>/prompts.md`
+- Banco com o texto ORIGINAL de todos os cards abaixo (biblioteca VSA Ultra + Doc de prompts). **Não acesse a biblioteca nem o Doc**: está tudo lá. Ache pelo id (`## 43 ·`).
+- Use o texto FIEL ao original. Só mude o que a seção "Adaptação masculina" manda. O prompt fica igual ao que funciona.
+- Além dos cards numerados: **colocar** (colocar peças na cama uma por uma, 2 imagens: início e fim) e **fechamento** (tirar peças da cama uma por uma).
 
-1. **Biblioteca VSA Ultra** — https://vsacomu.com.br/bibliotecadeprompts/ (login do usuário, salvo no navegador).
-   - Abra no navegador. Se pedir login, peça para o usuário entrar; nunca digite senha.
-   - Pegue o prompt sempre ao vivo da biblioteca, pelo id do card, com javascript na página:
-     `const i = items.find(x => x.id === ID); [i.title, i.requisitos, i.config, i.prompt].join('\n\n')`
-   - No Claude Code a saída do javascript corta em ~1000 caracteres. Junte os cards em `window.__p`, escreva tudo num `<article>` com `pre-wrap` no body e leia com `get_page_text` (1 chamada para todos).
-   - Use o texto do prompt FIEL ao original. Só mude o que a seção "Adaptação masculina" manda. O prompt fica igual ao que funciona.
-2. **Documento de prompts (Google Docs)** — https://docs.google.com/document/d/1RbynLRG9YQnBJmYplw_2hIavnnQC_rv8Qeurs8nfvNs (exportar com /export?format=txt: no Chrome isso BAIXA `Cópia de POV - PROMPTS .txt` em `~/Downloads`; leia o arquivo com grep/sed). Tem dois prompts que não estão na biblioteca:
-   - **Colocar peças na cama uma por uma** ("Create a realistic top-down product placement video using the provided opening image as the starting frame..."). Usa 2 imagens: frame inicial e final.
-   - **Fechamento: tirar peças da cama uma por uma** ("Create a realistic overhead closing video...").
-
-## Catálogo POV da biblioteca (ids)
+## Catálogo POV (ids do `prompts.md`)
 
 ### Imagens (montar a cena)
 | id | Card | O que faz | Imagens |
 |---|---|---|---|
 | 2 | Remover roupas/textos | Limpa um print de vídeo de referência: tira roupa, mãos e textos. Trocar a descrição do cenário pelo que aparece no print. | 1: print |
-| 3 | Colocando a mão no ambiente | Põe as mãos no cenário vazio. **Usar o kit da mão do perfil.** | 1: cenário vazio |
+| 3 | Colocando a mão no ambiente | Põe as mãos no cenário vazio. **Só se precisar refazer a imagem base: usar o kit da mão abaixo.** | 1: cenário vazio |
 | 4 | Colocar roupa no ambiente | Coloca a peça do produto na cena com as mãos. Base dos vídeos. | 1: cena com mãos · 2: produto |
 | 1 | Recriando cenário | Troca a peça numa cena que já tem roupa, "como se tivesse saído da embalagem" na cama. | 1: cena com mãos+roupa · 2: produto |
 | 5 | Roupa no pacote | Troca a roupa dentro de um pacote transparente (para o gancho do pacote). | 1: cena com pacote · 2: produto |
@@ -69,12 +70,13 @@ Se a imagem da cena NÃO tem roupa (caso da imagem base com mãos), no card 4 tr
 - **CTA**: 8 (palma tampa a câmera) · "fechamento tirar peças" (doc). O card 8 é o texto do 13/39 + palma: se a cena anterior for 13, 38 ou 39, use o fechamento do doc.
 - Evite repetir a mesma ação em cenas seguidas. Um vídeo típico: 4 a 6 cenas.
 
-## Kit da mão (vem do perfil)
-- A identidade das mãos (luvas, tatuagem, relógio...), o cenário e a imagem base estão em `~/.claude/videos-pov/perfil.md`. Ela é fixa: todo take descreve a mesma mão.
-- Se precisar gerar as mãos de novo: adaptar o card 3 trocando "feminine hands / fair skin / nails / bracelets / ring / small tattoo" pela descrição em inglês do perfil.
+## Kit da mão masculina (identidade fixa da loja)
+- Mãos masculinas com **luvas pretas de nitrilo**, **antebraços com tatuagens em preto e cinza** (fechamento de braço) e **relógio de pulseira de metal preta e mostrador preto no pulso esquerdo**.
+- Cenário: cama com lençol amassado, **iluminação laranja (esquerda) e azul (direita)**, câmera de cima.
+- Imagem base pronta: `<skill>/imagens/base-maos-cama.jpg` (no Flow do Lucas se chama "Adding masculine hands to scene"). É a imagem 1 do card 4.
+- Se precisar gerar as mãos de novo: adaptar o card 3 trocando "feminine hands / fair skin / nails / bracelets / ring / small tattoo" por: two masculine adult hands wearing fitted matte black nitrile gloves; forearms with black and grey sleeve tattoos (no text in the tattoos); a black metal link wristwatch with black dial on the left wrist; no rings, no bracelets.
 
 ## Adaptação masculina (únicas mudanças permitidas no texto original)
-Vale quando o kit do perfil é masculino. Os exemplos abaixo usam o kit luva preta + tatuagem + relógio; troque pelos itens do perfil.
 - "feminine hands" / "the woman's hands" / "she" → "masculine hands" / "the man's hands" / "he".
 - Onde o prompt fala de mãos/unhas/acessórios ("white nails", "nails", "manicure", "bracelets", "rings", "red nails") → "black nitrile gloves, tattooed forearms, wristwatch".
 - Em HAND CONSISTENCY, trocar "Keep the exact same manicure" por "Keep the exact same black gloves • Keep the exact same tattoos • Keep the exact same wristwatch".
@@ -96,7 +98,7 @@ Testado 2026-10-16 (camiseta dry fit). O usuário manda o link de um vídeo de I
 ## Imagem base no Flow (produto na nossa cama)
 1. Foto do produto: o link do TikTok Shop traz a imagem principal no parâmetro `og_info` da URL (CDN ibyteimg) — baixe com curl. A página do produto pode abrir CAPTCHA: feche, nunca resolva.
 2. Subir a foto no Flow sem seletor de arquivo: no console da página do Flow, `fetch(url)` → `File` → disparar `paste` com `DataTransfer` na caixa de comando (contenteditable). Ela entra como ingrediente.
-3. A cena com as mãos (imagem base do perfil) já está no projeto: ⋮ → Incluir no comando.
+3. A imagem base (`base-maos-cama.jpg`) já está no projeto: ⋮ → Incluir no comando.
 4. Configuração → Imagem (Nano Banana Pro, 9:16, x1). Prompt = card 4 adaptado + **escala explícita**: "cada peça tem uns 4 palmos de largura; juntas ocupam ~85% da largura do quadro; nunca pequenas". Sem isso as peças saem pequenas (calça).
 5. No vídeo há durações 4/6/8/10s no mesmo painel.
 
@@ -116,7 +118,7 @@ Testado em 2026-10-14 (cena 4 da calça, ~40s para gerar).
 - Escreva a narração numa frase só, separada por vírgulas: com ponto final o edge-tts faz pausas de ~0,8s (23% do vídeo mudo na 1ª versão da camiseta).
 - Legenda em caixa preta sólida (BorderStyle 3), como a referência: contorno sozinho some em cima de camiseta branca.
 - CTA "aponta pro carrinho": a IA não entende "apontar pro canto" (fez os indicadores apontarem um pro outro). Funcionou com alvo físico: "o indicador direito toca a cama no canto inferior esquerdo 3 vezes, como apertando um botão".
-- Acessório (relógio etc.) troca de cor entre takes ou no meio do take: descreva o acessório exato do perfil no prompt de todo take e corte os trechos em que ele muda.
+- Acessório (relógio etc.) troca de cor entre takes ou no meio do take: descreva "black metal wristwatch with black dial" no prompt de todo take e corte os trechos em que ele muda.
 - O crítico cego não conhece gíria: "não marca pizza" (mancha de suor) é expressão brasileira e fica.
 - Edição: `bash <skill>/ferramentas/editar.sh` dentro da pasta do vídeo, com `cortes.txt` (`take inicio fim velocidade`), `headline.txt` e `audio/`. Velocidade por trecho (1x a 1.25x com narração; 1.6x no formato só-música).
 
@@ -134,7 +136,7 @@ FFmpeg: do PATH; no Windows, se não estiver no PATH, `winget install Gyan.FFmpe
 
 ## Formato da resposta (Claude Code)
 O usuário copia os prompts de uma página com botão de copiar, não do terminal.
-1. Pasta do vídeo: `<pasta dos vídeos do perfil>/AAAA-MM-DD-<produto>/`.
+1. Pasta do vídeo: `~/tiktok-shop/videos/AAAA-MM-DD-<produto>/`.
 2. Escreva `conteudo.html` lá, copiando a estrutura de `exemplo-conteudo.html` (nesta skill): header com título e `.progress`, bloco do roteiro, bloco das imagens na ordem, um `<article class="scene">` por prompt (número, título, `.beat` com bloco + card, `.line` com a fala, `.meta` com ferramenta/entrada e `li.warn` para som ligado ou alerta, `<pre>` com o prompt, actions com copy/more/checkbox), e uma `.note` de no máximo 2 linhas sobre o que foi adaptado. Escape `&` e `<` no `<pre>`.
 3. Monte com `template.html` desta skill trocando `{{TITULO}}` (nome curto: "<Produto> POV") e `{{CONTEUDO}}`, salve como `prompts.html`, e publique com a ferramenta Artifact (icon `video`).
 4. No chat: só o link, a tabela roteiro → cena e os alertas. Nada de prompt no terminal.
