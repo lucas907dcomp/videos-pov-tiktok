@@ -1,0 +1,6 @@
+{
+  "name": "videos-pov",
+  "version": "1.0.0",
+  "description": "Vídeos POV com IA para TikTok Shop: roteiro ou vídeo viral → takes no Google Flow → narração, legenda e edição no FFmpeg.",
+  "author": { "name": "Lucas Aragão" }
+}

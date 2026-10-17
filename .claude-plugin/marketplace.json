@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "videos-pov",
+  "description": "Skill de vídeos POV para TikTok Shop.",
+  "owner": { "name": "Lucas Aragão" },
+  "plugins": [
+    {
+      "name": "videos-pov",
+      "description": "Vídeos POV com IA para TikTok Shop: roteiro ou vídeo viral → takes no Google Flow → narração, legenda e edição no FFmpeg.",
+      "source": "./"
+    }
+  ]
+}

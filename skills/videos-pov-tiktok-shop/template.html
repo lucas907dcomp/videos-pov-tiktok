@@ -1,0 +1,115 @@
+<title>{{TITULO}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: coluna única de "takes" como uma ordem de filmagem; a luz da cena (laranja à esquerda, azul à direita) vira o acento. */
+:root {
+  --bg: #f5f4f2; --surface: #ffffff; --ink: #1b1a1f; --muted: #6b6870; --line: #e3e0dc;
+  --orange: #d9620f; --blue: #2f5fd0; --ok: #1d8a4e; --code-bg: #f0eeeb;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121116; --surface: #1b1a21; --ink: #ecebef; --muted: #9a97a3; --line: #2c2a33;
+  --orange: #ff8a3d; --blue: #6f9bff; --ok: #4cc488; --code-bg: #15141a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121116; --surface: #1b1a21; --ink: #ecebef; --muted: #9a97a3; --line: #2c2a33;
+  --orange: #ff8a3d; --blue: #6f9bff; --ok: #4cc488; --code-bg: #15141a; color-scheme: dark }
+
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); margin: 0 }
+.wrap { max-width: 860px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 22px }
+
+.top { position: relative; padding-block: 8px 4px }
+.top::before { content: ""; position: absolute; inset: -28px -16px auto; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--blue)) }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+h1 { font: 700 clamp(26px, 5vw, 38px)/1.1 var(--display); margin: 8px 0 6px; text-wrap: balance }
+.progress { font: 500 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums }
+.progress b { color: var(--ok) }
+
+.block { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px }
+.block h2 { font: 600 13px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px }
+.script { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none }
+.script li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 12px }
+.script li > span { font: 500 12px/1.9 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--orange) }
+.script li > p { margin: 0; min-width: 0 }
+.imgs { margin: 0; padding-left: 1.2em; display: grid; gap: 4px }
+
+.scene { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; scroll-margin-top: 12px }
+.scene.done { opacity: .62 }
+.scene-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; padding: 16px 18px 0 }
+.num { font: 700 28px/1 var(--display); color: var(--blue); font-variant-numeric: tabular-nums; min-width: 2ch }
+.scene-head h3 { font: 700 20px/1.2 var(--display); margin: 0; flex: 1 1 14rem; min-width: 0 }
+.beat { font: 500 11px/1 var(--mono); letter-spacing: .07em; text-transform: uppercase; color: var(--orange);
+  border: 1px solid currentColor; border-radius: 99px; padding: 5px 9px }
+.line { margin: 10px 18px 0; color: var(--muted); font-style: italic }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 18px 0; padding: 0; list-style: none }
+.meta li { font: 500 12px/1 var(--mono); background: var(--code-bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px }
+.meta li.warn { color: var(--orange); border-color: var(--orange) }
+
+.prompt { position: relative; margin: 14px 0 0; border-top: 1px solid var(--line); background: var(--code-bg) }
+.prompt pre { margin: 0; padding: 16px 18px; font: 13px/1.6 var(--mono); white-space: pre-wrap; word-break: break-word;
+  max-height: 15rem; overflow: hidden }
+.prompt.open pre { max-height: none }
+.prompt:not(.open)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4rem;
+  background: linear-gradient(transparent, var(--code-bg)); pointer-events: none }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 18px 16px; border-top: 1px solid var(--line) }
+button { font: 600 14px var(--body); border-radius: 8px; cursor: pointer; padding: 10px 16px; border: 1px solid var(--line);
+  background: transparent; color: var(--ink) }
+button.copy { background: var(--ink); color: var(--surface); border-color: var(--ink); min-width: 9.5rem }
+button.copy.ok { background: var(--ok); border-color: var(--ok) }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px }
+.done-toggle { margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); cursor: pointer }
+.done-toggle input { width: 18px; height: 18px; accent-color: var(--ok) }
+.note { color: var(--muted); font-size: 13px; margin: 0 }
+@media (max-width: 520px) { .script li { grid-template-columns: 1fr; gap: 0 } .done-toggle { margin-left: 0 } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<main class="wrap">
+{{CONTEUDO}}
+</main>
+
+<script>
+const key = 'pov:' + document.title + ':';
+const store = {
+  get(k) { try { return localStorage.getItem(key + k) } catch { return null } },
+  set(k, v) { try { v ? localStorage.setItem(key + k, '1') : localStorage.removeItem(key + k) } catch {} }
+};
+const scenes = [...document.querySelectorAll('.scene')];
+const progress = document.querySelector('.progress');
+function paint() {
+  const n = scenes.filter(s => s.classList.contains('done')).length;
+  if (progress) progress.innerHTML = `<b>${n}</b> de ${scenes.length} prompts gerados`;
+}
+scenes.forEach(scene => {
+  const pre = scene.querySelector('pre');
+  const box = scene.querySelector('.prompt');
+  const copy = scene.querySelector('button.copy');
+  const more = scene.querySelector('button.more');
+  const done = scene.querySelector('.done-toggle input');
+  copy.addEventListener('click', async () => {
+    const label = copy.textContent;
+    try { await navigator.clipboard.writeText(pre.textContent.trim()); copy.textContent = 'Copiado'; }
+    catch {
+      const r = document.createRange(); r.selectNodeContents(pre);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      box.classList.add('open'); copy.textContent = 'Selecionado: Ctrl+C';
+    }
+    copy.classList.add('ok');
+    setTimeout(() => { copy.textContent = label; copy.classList.remove('ok') }, 1800);
+  });
+  if (pre.scrollHeight <= pre.clientHeight + 4) { box.classList.add('open'); more.hidden = true }
+  more.addEventListener('click', () => {
+    const open = box.classList.toggle('open');
+    more.textContent = open ? 'Recolher' : 'Ver inteiro';
+  });
+  done.checked = store.get(scene.id) === '1';
+  scene.classList.toggle('done', done.checked);
+  done.addEventListener('change', () => { scene.classList.toggle('done', done.checked); store.set(scene.id, done.checked); paint() });
+});
+paint();
+</script>
