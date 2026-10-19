@@ -14,6 +14,7 @@
 - Erro de IA (peça deslizando, zíper inventado, mão sem braço) tem que ser cortado: o Lucas pega na hora. Revisão quadro a quadro antes de entregar.
 - Corte no meio do take só por erro; corte sem motivo fica abrupto.
 - 2026-10-19: 1ª venda veio de vídeo feito à mão (~1.000 views); o POV com IA teve 180 views. Produto e formato diferentes: comparação ainda não isola a causa.
+- 2026-10-19 (TikTok Studio): todos os vídeos da conta seguram ~3s em média e 0–5% assistem até o fim; a maioria sai em 0:01–0:02. O POV com IA (calça) teve retenção igual ou melhor que os feitos à mão (3,22s vs 2,94–3,01s). A diferença de views não veio da retenção. Prioridade: o 1º segundo.
 
 - Crítico cego vale a pena: na calça pegou 5 problemas que eu e a revisão por folha de contato deixamos passar (2026-10-15).
 
