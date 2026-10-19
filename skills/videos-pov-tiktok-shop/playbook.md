@@ -13,6 +13,7 @@
 ## O que os nossos vídeos ensinaram
 - Erro de IA (peça deslizando, zíper inventado, mão sem braço) tem que ser cortado: o Lucas pega na hora. Revisão quadro a quadro antes de entregar.
 - Corte no meio do take só por erro; corte sem motivo fica abrupto.
+- 2026-10-19: 1ª venda veio de vídeo feito à mão (~1.000 views); o POV com IA teve 180 views. Produto e formato diferentes: comparação ainda não isola a causa.
 
 - Crítico cego vale a pena: na calça pegou 5 problemas que eu e a revisão por folha de contato deixamos passar (2026-10-15).
 
