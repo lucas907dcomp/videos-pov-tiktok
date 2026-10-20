@@ -18,7 +18,16 @@
 
 - Crítico cego vale a pena: na calça pegou 5 problemas que eu e a revisão por folha de contato deixamos passar (2026-10-15).
 
-- 2026-10-20 — referência @eulucsantos (17 vídeos >100 mil em 47 dias): 8 s, 1 take, 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, texto nativo pequeno do TikTok com emoji ("Essa aqui é padrão ein 🤝💀"), ~3 posts/dia. Hipótese forte: formato curto de 1 take + volume.
+- 2026-10-20 — referência @eulucsantos (17 vídeos >100 mil em 47 dias): 8 s em 3–6 trechos curtos (jump cuts de 1,5–2,5 s), 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, texto nativo pequeno do TikTok com emoji ("Essa aqui é padrão ein 🤝💀"), ~3 posts/dia. Hipótese: formato curto com cortes rápidos + volume.
+
+## Modelos de vídeo em teste (regra do Lucas, 2026-10-20: NUNCA abandonar um modelo por causa de outro — manter vários, medir cada um, comparar)
+| Modelo | Estrutura | Texto | Exemplos |
+|---|---|---|---|
+| A · Nosso completo | pacote → jogar na cama → esticar → tecido → tirar tudo; 12–13 s; 1.6x | headline grande (`HL_STYLE=grande`) | calça, camisa de compressão v2 |
+| B · Jaqueta (vendeu) | pacote → esticar → tecido → tirar; ~11–12 s | texto nativo pequeno | jaqueta original (1ª venda) |
+| C · Narração | estrutura do vídeo viral + narração edge-tts + legenda palavra por palavra | headline + legenda | camiseta dry fit, jaqueta v3 |
+| D · @eulucsantos | 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, 3–6 trechos de 1,5–2,5 s, ~8 s | `HL_STYLE=nativo` (TikTok Sans 700) | (a fazer) |
+Cada vídeo novo diz na ficha qual modelo é. Com métricas, comparar por modelo, não por vídeo isolado.
 
 ## Hipóteses para testar (uma variável por vez)
 - Headline grande (Arial Black) vs texto nativo pequeno do TikTok. (Preço na headline: proibido pelo Lucas.)

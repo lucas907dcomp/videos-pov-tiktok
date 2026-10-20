@@ -9,6 +9,13 @@ if command -v ffmpeg >/dev/null; then B=$(dirname "$(command -v ffmpeg)")
 else B=$(dirname "$(find "$HOME/AppData/Local/Microsoft/WinGet/Packages" -iname ffmpeg.exe | head -1)"); fi
 [ -f ariblk.ttf ] || cp /c/Windows/Fonts/ariblk.ttf . 2>/dev/null || cp "/System/Library/Fonts/Supplemental/Arial Black.ttf" ariblk.ttf
 HL_Y="${HL_Y:-0.10}"; HL_SIZE="${HL_SIZE:-58}"; BG_VOL="${BG_VOL:-0.15}"
+# HL_STYLE=nativo: texto igual ao nativo do TikTok (TikTok Sans 700, pequeno, sombra leve, ~75% da altura) — estilo do @eulucsantos
+HL_STYLE="${HL_STYLE:-grande}"
+if [ "$HL_STYLE" = nativo ]; then
+  cp "$(dirname "$0")/TikTokSans-700.ttf" . ; HL_FONT=TikTokSans-700.ttf; HL_Y="${HL_Y_NATIVO:-0.75}"; HL_SIZE="${HL_SIZE_NATIVO:-44}"; HL_FX="shadowcolor=black@0.55:shadowx=2:shadowy=2"
+else
+  HL_FONT=ariblk.ttf; HL_FX="borderw=7:bordercolor=black"
+fi
 IN=(); F=""; i=0; declare -A idx
 while read -r t a b v; do
   [ -z "$t" ] && continue
@@ -22,7 +29,7 @@ for j in $(seq 0 $((i-1))); do F+="[v$j][a$j]"; done
 F+="concat=n=$i:v=1:a=1[vc][ac];"
 V="[vc]"
 if [ -f headline.txt ]; then
-  F+="${V}drawtext=fontfile=ariblk.ttf:textfile=headline.txt:text_align=C:x=(w-text_w)/2:y=h*$HL_Y:fontsize=$HL_SIZE:line_spacing=12:fontcolor=white:borderw=7:bordercolor=black[vh];"; V="[vh]"
+  F+="${V}drawtext=fontfile=$HL_FONT:textfile=headline.txt:text_align=C:x=(w-text_w)/2:y=h*$HL_Y:fontsize=$HL_SIZE:line_spacing=12:fontcolor=white:$HL_FX[vh];"; V="[vh]"
 fi
 if [ -f audio/narracao.ass ]; then
   F+="${V}subtitles=audio/narracao.ass[vs];"; V="[vs]"

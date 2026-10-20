@@ -17,6 +17,8 @@ Se o usuário disser "vamos começar" ou for o primeiro vídeo:
 4. Projeto no Flow: se o usuário ainda não tem um projeto com a imagem base, crie um projeto novo e suba `<skill>/imagens/base-maos-cama.jpg` (é a cama + mãos de luva preta + relógio). Pelo `file_upload` da extensão ou pedindo para ele arrastar o arquivo.
 5. Depois peça o produto (link do TikTok Shop) e o roteiro da Vyral ou o link de um vídeo viral de referência.
 
+**Vários modelos de vídeo, sempre (regra do Lucas):** o playbook lista os modelos em teste (A, B, C, D...). Um modelo novo nunca substitui os outros; cada vídeo registra qual modelo usou. O que já foi aprendido (escala, Nano Banana Pro, fechamento completo, relógio) vale para todos.
+**Detectar corte em vídeo de referência:** scdet com limiar baixo (4) e conferir quadro antes/depois de cada pico; limiar alto perde jump cut entre cenas parecidas (erro de 2026-10-20).
 **Antes de planejar:** leia `<skill>/playbook.md` (o que já sabemos e as hipóteses em teste). Cada vídeo testa no máximo uma variável nova.
 **Ao entregar o vídeo:** crie `ficha.md` na pasta do vídeo (o que foi feito, takes descartados, edição, headline; métricas em 48h e 7 dias). Se existir `~/cerebro/pessoal/tiktok-shop/videos/` (máquina do Lucas), a ficha vai para lá.
 
