@@ -20,6 +20,8 @@
 
 - 2026-10-20 — referência @eulucsantos (17 vídeos >100 mil em 47 dias): 8 s em 3–6 trechos curtos (jump cuts de 1,5–2,5 s), 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, texto nativo pequeno do TikTok com emoji ("Essa aqui é padrão ein 🤝💀"), ~3 posts/dia. Hipótese: formato curto com cortes rápidos + volume.
 
+- 2026-10-20 — **O "emborrachado" vinha do modelo de vídeo.** Todos os takes até aqui foram no *Omni 1.1 Flash* (padrão do Flow, 12 créditos). Mesmo prompt e imagem: Flash dobra a peça numa faixa rígida; **Veo 3.1 Fast (20 cr.)** e **Veo 3.1 Quality (100 cr.)** esticam com caimento, brilho e peso real. Fast já resolve; Quality um pouco mais nítido. Kling 3.0 e Seedance 2.0 (API Higgsfield) não testados: conta da API sem créditos.
+
 ## Modelos de vídeo em teste (regra do Lucas, 2026-10-20: NUNCA abandonar um modelo por causa de outro — manter vários, medir cada um, comparar)
 | Modelo | Estrutura | Texto | Exemplos |
 |---|---|---|---|
