@@ -136,7 +136,7 @@ FFmpeg: do PATH; no Windows, se não estiver no PATH, `winget install Gyan.FFmpe
 
 ## Formato da resposta (Claude Code)
 O usuário copia os prompts de uma página com botão de copiar, não do terminal.
-1. Pasta do vídeo: `~/tiktok-shop/videos/AAAA-MM-DD-<produto>/`.
+1. Pasta do vídeo: `~/tiktok-shop/videos/AAAA-MM-DD-<produto>/`. **Toda imagem usada vai para `imagens/` dentro dela** (foto do produto, produto no ambiente, frames de início/fim), baixada do Flow em 1080p. É o que permite replicar um produto que vendeu sem caçar no Flow.
 2. Escreva `conteudo.html` lá, copiando a estrutura de `exemplo-conteudo.html` (nesta skill): header com título e `.progress`, bloco do roteiro, bloco das imagens na ordem, um `<article class="scene">` por prompt (número, título, `.beat` com bloco + card, `.line` com a fala, `.meta` com ferramenta/entrada e `li.warn` para som ligado ou alerta, `<pre>` com o prompt, actions com copy/more/checkbox), e uma `.note` de no máximo 2 linhas sobre o que foi adaptado. Escape `&` e `<` no `<pre>`.
 3. Monte com `template.html` desta skill trocando `{{TITULO}}` (nome curto: "<Produto> POV") e `{{CONTEUDO}}`, salve como `prompts.html`, e publique com a ferramenta Artifact (icon `video`).
 4. No chat: só o link, a tabela roteiro → cena e os alertas. Nada de prompt no terminal.
