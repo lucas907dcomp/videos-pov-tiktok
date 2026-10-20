@@ -101,8 +101,10 @@ Testado 2026-10-16 (camiseta dry fit). O usuário manda o link de um vídeo de I
 1c. **Subir arquivo local no Flow (testado 2026-10-19):** copie a imagem para a área de transferência do Windows (PowerShell: `[System.Windows.Forms.Clipboard]::SetImage(...)`), clique na caixa de comando e aperte Ctrl+V. Avise o usuário que a área de transferência dele foi trocada.
 2. Subir a foto no Flow sem seletor de arquivo: no console da página do Flow, `fetch(url)` → `File` → disparar `paste` com `DataTransfer` na caixa de comando (contenteditable). Ela entra como ingrediente.
 3. A imagem base (`base-maos-cama.jpg`) já está no projeto: ⋮ → Incluir no comando.
-4. Configuração → Imagem (Nano Banana Pro, 9:16, x1). Prompt = card 4 adaptado + **escala explícita**: "cada peça tem uns 4 palmos de largura; juntas ocupam ~85% da largura do quadro; nunca pequenas". Sem isso as peças saem pequenas (calça).
+4. Configuração → Imagem (**Nano Banana Pro, nunca o 2.1** — regra do Lucas, 2026-10-19; 9:16, x1). Prompt = card 4 adaptado + **escala explícita**: "cada peça tem uns 4 palmos de largura; juntas ocupam ~85% da largura do quadro; nunca pequenas". Sem isso as peças saem pequenas (calça).
+4b. **Tamanho da peça (erro repetido: calça e camisa de compressão).** Peça pequena em relação às mãos derruba a qualidade. Inclua como referência de escala a imagem da jaqueta que vendeu (`produto no ambiente.jpg`, também em `imagens/` da pasta 2026-10-13-jaqueta) e diga: "match the garment scale of the jacket reference: adult size, torso about three gloved hands wide, sleeves fully visible". Compare com o vídeo de referência antes de gerar os takes.
 5. No vídeo há durações 4/6/8/10s no mesmo painel.
+6. **Estrutura obrigatória (regra do Lucas):** pacote → **jogar/colocar as peças na cama** → esticar → tecido → **fechamento tirando TODAS as peças** (nunca parar com peça na cama). O take de colocar é feito no modo **Elementos** (não Frames): imagem da cama vazia com as mãos + imagem final com as peças, prompt "colocar" do banco.
 
 ## Gerar no Flow (Claude opera o Chrome do usuário)
 Testado em 2026-10-14 (cena 4 da calça, ~40s para gerar).
