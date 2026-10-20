@@ -26,7 +26,7 @@
 | A · Nosso completo | pacote → jogar na cama → esticar → tecido → tirar tudo; 12–13 s; 1.6x | headline grande (`HL_STYLE=grande`) | calça, camisa de compressão v2 |
 | B · Jaqueta (vendeu) | pacote → esticar → tecido → tirar; ~11–12 s | texto nativo pequeno | jaqueta original (1ª venda) |
 | C · Narração | estrutura do vídeo viral + narração edge-tts + legenda palavra por palavra | headline + legenda | camiseta dry fit, jaqueta v3 |
-| D · @eulucsantos | 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, 3–6 trechos de 1,5–2,5 s, ~8 s | `HL_STYLE=nativo` (TikTok Sans 700) | (a fazer) |
+| D · @eulucsantos | peça já enchendo o quadro e mão esticando no 0,0 s; 2 peças sobrepostas com mangas vazando pelas bordas; 4–6 trechos de 1,5–2,5 s; 1–2 trechos com zoom 1,3–1,5x (`cortes.txt` 5ª coluna); ~8 s; 60 fps; `EQ="saturation=1.6:contrast=1.08"`; fim varrendo tudo | `HL_STYLE=nativo` (TikTok Sans 700 w110, contorno+halo) | camisa de compressão `modelo-d/final-d.mp4` (takes reaproveitados) |
 Cada vídeo novo diz na ficha qual modelo é. Com métricas, comparar por modelo, não por vídeo isolado.
 
 ## Hipóteses para testar (uma variável por vez)
