@@ -97,6 +97,8 @@ Testado 2026-10-16 (camiseta dry fit). O usuário manda o link de um vídeo de I
 
 ## Imagem base no Flow (produto na nossa cama)
 1. Foto do produto: o link do TikTok Shop traz a imagem principal no parâmetro `og_info` da URL (CDN ibyteimg) — baixe com curl. A página do produto pode abrir CAPTCHA: feche, nunca resolva.
+1b. **Link é de vídeo, não de produto** (vt.tiktok.com → /video/): a web não mostra a sacolinha. Baixe com yt-dlp e tire a foto de um quadro onde o produto aparece inteiro e esticado (ffmpeg -ss T -frames:v 1), recortando texto e fundo. Testado 2026-10-19 (camisa de compressão).
+1c. **Subir arquivo local no Flow (testado 2026-10-19):** copie a imagem para a área de transferência do Windows (PowerShell: `[System.Windows.Forms.Clipboard]::SetImage(...)`), clique na caixa de comando e aperte Ctrl+V. Avise o usuário que a área de transferência dele foi trocada.
 2. Subir a foto no Flow sem seletor de arquivo: no console da página do Flow, `fetch(url)` → `File` → disparar `paste` com `DataTransfer` na caixa de comando (contenteditable). Ela entra como ingrediente.
 3. A imagem base (`base-maos-cama.jpg`) já está no projeto: ⋮ → Incluir no comando.
 4. Configuração → Imagem (Nano Banana Pro, 9:16, x1). Prompt = card 4 adaptado + **escala explícita**: "cada peça tem uns 4 palmos de largura; juntas ocupam ~85% da largura do quadro; nunca pequenas". Sem isso as peças saem pequenas (calça).
