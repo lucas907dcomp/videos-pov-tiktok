@@ -9,6 +9,9 @@ Use quando o usuário mandar um roteiro da Vyral (blocos GANCHO / DESENVOLVIMENT
 
 Mesma loja, mesmas mãos, mesmo cenário para todos que usam esta skill. Abaixo, `<skill>` = o diretório base desta skill (aparece quando ela carrega).
 
+## PADRÃO ATUAL: siga `<skill>/receita-padrao.md`
+Vídeo aprovado pelo Lucas em 2026-10-20 (camisa de compressão, espelho do @eulucsantos). Todo vídeo novo usa essa receita: produto do perfil @eulucsantos → imagem grande com lençol azul/luz laranja (Nano Banana Pro) → 5 cenas (jogar, esticada longa, vai e volta, close com zoom, tirar tudo) no **Veo 3.1 Fast** → edição 1.3x, 60 fps, texto nativo. O resto desta skill é detalhe e histórico; quando conflitar, vale a receita.
+
 ## Primeira vez nesta máquina (faça sozinho, sem perguntar)
 Se o usuário disser "vamos começar" ou for o primeiro vídeo:
 1. Confira e instale o que faltar: `ffmpeg -version` (senão `winget install Gyan.FFmpeg`), `python -c "import edge_tts"` (senão `pip install edge-tts`), `python -m yt_dlp --version` (senão `pip install "yt-dlp[default,curl-cffi]"`).
