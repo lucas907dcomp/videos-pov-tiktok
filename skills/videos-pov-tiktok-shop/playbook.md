@@ -19,7 +19,7 @@
 - Crítico cego vale a pena: na calça pegou 5 problemas que eu e a revisão por folha de contato deixamos passar (2026-10-15).
 
 ## Hipóteses para testar (uma variável por vez)
-- Headline de preço ("quase de graça") vs headline de qualidade/achado.
+- Headline grande (Arial Black) vs texto nativo pequeno do TikTok. (Preço na headline: proibido pelo Lucas.)
 - Abrir com a ação mais forte (esticar) vs abrir colocando na cama.
 - 13s vs ~20s.
 - Narração (edge-tts) vs só música do TikTok — mesma edição, duas versões.
