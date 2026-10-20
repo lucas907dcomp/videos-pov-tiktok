@@ -18,6 +18,8 @@
 
 - Crítico cego vale a pena: na calça pegou 5 problemas que eu e a revisão por folha de contato deixamos passar (2026-10-15).
 
+- 2026-10-20 — referência @eulucsantos (17 vídeos >100 mil em 47 dias): 8 s, 1 take, 2 peças sobrepostas ocupando o quadro, ação desde o 1º quadro, texto nativo pequeno do TikTok com emoji ("Essa aqui é padrão ein 🤝💀"), ~3 posts/dia. Hipótese forte: formato curto de 1 take + volume.
+
 ## Hipóteses para testar (uma variável por vez)
 - Headline grande (Arial Black) vs texto nativo pequeno do TikTok. (Preço na headline: proibido pelo Lucas.)
 - Abrir com a ação mais forte (esticar) vs abrir colocando na cama.
