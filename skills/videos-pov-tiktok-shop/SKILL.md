@@ -112,6 +112,7 @@ Testado 2026-10-16 (camiseta dry fit). O usuário manda o link de um vídeo de I
 Testado em 2026-10-14 (cena 4 da calça, ~40s para gerar).
 1. Abra o projeto numa aba sua do grupo MCP (`https://flow.google.com/project/<id>`). Não feche a última aba do grupo no meio: o grupo some e as ids mudam.
 2. Na imagem de entrada, menu ⋮ → **Animar**: ela vira o frame "Início". Para 2 frames (ex.: colocar uma por uma), preencha também "Fim".
+2c. **Esticar (regra do Lucas, 2026-10-20):** esticada moderada com vai e volta (4–5 vezes, "nheque-nheque"), a peça volta ao lugar. Nunca puxão brusco, como se fosse rasgar, nem peça voando. Escreva isso no prompt: "gentle rhythmic stretch-and-release… NOT a strong yank".
 2b. **Modelo de vídeo: Veo 3.1 Fast (20 créditos), nunca o Omni 1.1 Flash padrão** para takes de esticar/manusear — o Flash deixa o tecido emborrachado (teste 2026-10-20). Quality (100) só para o take principal. Confira também a proporção 9:16: ao trocar de modelo ela pode voltar para 16:9, e o x2 da imagem passa para o vídeo.
 3. Clique na caixa "O que você quer criar?", digite o prompt **numa linha só** (Enter pode enviar) e confira o rodapé: `Vídeo · 720p · 8s · 9:16 · x1`.
 4. Clique na seta. O vídeo aparece como 1º card do projeto.
