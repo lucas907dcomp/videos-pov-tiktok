@@ -137,6 +137,7 @@ Testado em 2026-10-15 (calça, 4 takes → 12,9s).
 6. **Headline** (obrigatória): `headline.txt` na pasta do vídeo, uma frase por linha (3 linhas curtas, MAIÚSCULAS). **Nunca preço na headline (regra do Lucas, 2026-10-19).** Título chamativo sobre achado/qualidade (ex.: "NÃO ACREDITO QUE ESSAS / 3 CALÇAS SAÍRAM / QUASE DE GRAÇA!", "ESSA JAQUETA DRY FIT / É OUTRO NÍVEL"). O `editar.sh` desenha em Arial Black (`ariblk.ttf` copiada para a pasta), branca com contorno preto (borderw=7), fontsize 58, a 20% da altura, o vídeo todo. Emoji fica de fora (drawtext não desenha emoji colorido); use "!". Confira um quadro: a linha mais longa não pode encostar nas bordas (os botões do TikTok ficam à direita).
 6b. **Take do Flow pode abrir com 3–4 quadros da cena vazia** (fechamento da jaqueta, 2026-10-19): a folha de contato a fps=2 não pega. Comece todo corte em ≥0,2s ou confira os 8 primeiros quadros (`select=lt(n,8)`).
 7. Revise o `final.mp4` com folha de contato (fps=3) e amplie qualquer trecho suspeito antes de entregar.
+8. **Ao terminar, abra o vídeo para o usuário ver** (regra do Lucas, 2026-10-19): no Windows, `Start-Process <caminho>inal.mp4` (PowerShell); no Mac, `open`.
 FFmpeg: do PATH; no Windows, se não estiver no PATH, `winget install Gyan.FFmpeg` (o `editar.sh` acha sozinho).
 
 ## Formato da resposta (Claude Code)
