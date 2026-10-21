@@ -9,8 +9,13 @@ Use quando o usuário mandar um roteiro da Vyral (blocos GANCHO / DESENVOLVIMENT
 
 Mesma loja, mesmas mãos, mesmo cenário para todos que usam esta skill. Abaixo, `<skill>` = o diretório base desta skill (aparece quando ela carrega).
 
-## PADRÃO ATUAL: siga `<skill>/receita-padrao.md`
-Vídeo aprovado pelo Lucas em 2026-10-20 (camisa de compressão, espelho do @eulucsantos). Todo vídeo novo usa essa receita: produto do perfil @eulucsantos → imagem grande com lençol azul/luz laranja (Nano Banana Pro) → 5 cenas (jogar, esticada longa, vai e volta, close com zoom, tirar tudo) no **Veo 3.1 Fast** → edição 1.3x, 60 fps, texto nativo. O resto desta skill é detalhe e histórico; quando conflitar, vale a receita.
+## COMECE AQUI: `<skill>/estilos.md`
+Todo vídeo = um **estilo** (Lucena, Original, Headline, Narração) + uma **combinação de takes** (catálogo T1–T10). Antes de gerar:
+1. Leia `estilos.md` (estilos, catálogo de takes, como escolher, diário de testes com métricas).
+2. Pergunte ou proponha o estilo (padrão: **Lucena**, receita em `receita-padrao.md`) e a combinação de takes com o motivo ligado ao produto (elástico → esticar; logo → close; zíper → T7). Mude UMA coisa em relação ao último vídeo.
+3. Gere sempre no **Veo 3.1 Fast**.
+4. Ao entregar: abra o vídeo e a pasta dele no Explorer (`Start-Process <mp4>; Start-Process explorer.exe "/select,<mp4>"`) e acrescente a linha do vídeo no diário de testes.
+O resto desta skill é detalhe e histórico; se algo conflitar, vale `estilos.md` / `receita-padrao.md`.
 
 ## Primeira vez nesta máquina (faça sozinho, sem perguntar)
 Se o usuário disser "vamos começar" ou for o primeiro vídeo:

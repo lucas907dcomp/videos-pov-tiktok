@@ -1,7 +1,7 @@
-# Receita padrão — vídeo aprovado pelo Lucas (2026-10-20)
+# Estilo Lucena — receita (vídeo aprovado pelo Lucas, 2026-10-20)
 
 Vídeo de referência aprovado: camisa de compressão gola alta, `final-d4.mp4` (14,7 s). "Nessa qualidade, com esses cortes, com esses takes." Todo vídeo novo começa daqui.
-Modelo do playbook: **D · espelho do @eulucsantos**. Os modelos A, B e C continuam em teste; esta receita não os apaga.
+Estilo Lucena (espelho do @eulucsantos). Outros estilos e o catálogo de takes estão em `estilos.md`; esta receita é a combinação de takes aprovada, não a única permitida.
 
 ## 0. De onde vêm os produtos e o formato
 - Espelhar o perfil **@eulucsantos** (TikTok): postar os produtos que ele postou (são vencedores) com o mesmo gancho e o mesmo jeito de filmar.
