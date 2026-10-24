@@ -76,7 +76,7 @@ abrir pacote 2,4 s → deitar + alisar + esticar de leve 5,8 s (sem corte no mei
 | 20/10 07:53 | Camiseta oversized | Headline | T1 → T10 → T6 | grande | 101 | 1,56 s | 1,1% |
 | 20/10 07:56 | Camisa compressão v2 | Headline | T1 → T2 → T3 → T10 → T8 | grande | 159 | 2,39 s | 2,9% |
 | (a postar) | Camisa compressão d4 | Lucena | T2 → T3 → T4 → T6 → T8 | nativo | | | |
-| (a postar) | Camiseta CAC zíper | Lucena | T2 → T3 → **T7 zíper (novo)** → T4 → T6 → T8 | nativo "Irmão essa aqui é braba demais" | | | |
+| (a postar) | Camiseta CAC zíper v2 (3 legendas) | Lucena + corte do Lucas | jogar as 2 → T4 → T7 zíper → T10 perto+logo → T8 (5 trechos de 2,5–4,5 s, 1.25x) | nativo, 3 frases | | | |
 
 ### O que os dados dizem até agora (20/10)
 - Os 2 únicos acima de 1.000 views: estilo Original, **texto nativo pequeno** e postados de madrugada (23:58 e 01:30).
