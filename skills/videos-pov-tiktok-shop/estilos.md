@@ -48,6 +48,8 @@ Medido no vídeo da jaqueta que vendeu (12,2 s): só **4 trechos longos**, cada 
 abrir pacote 2,4 s → deitar + alisar + esticar de leve 5,8 s (sem corte no meio) → aproximar da câmera e esfregar o tecido 2,9 s → tirar 1,1 s.
 - **Velocidade medida no vídeo da jaqueta: 1.4–1.5x em todos os trechos (usar 1.45x).** 1.25x fica lento. (Medido casando quadro a quadro o postado com os takes originais: `velocidade.py` no scratchpad / pasta da jaqueta.)
 - **Gancho = já na ação no quadro 0**: cortar o começo parado do take (no jacket, o take do pacote entra em 0,7 s, já rasgando). No "jogar", entrar quando as peças já estão no ar.
+- **Malícia do corte (regra do Lucas, 23/10): TODA cena entra no MEIO do movimento.** Nunca mostrar a mão pegando/se preparando (ex.: no "tecido de perto", entrar com a peça já vindo na direção da câmera, não com a mão pegando a gola). E sair da cena antes do movimento parar. Movimento constante do primeiro ao último quadro; quadro parado = espectador pula.
+  Como achar o ponto: folha a 6 fps do take, marcar o primeiro quadro em que a peça JÁ está se mexendo e o último antes de parar; esses são o início e o fim do trecho.
 - **Esticar certo** (o que vende): peça DEITADA na cama, mãos nas duas pontas da barra, puxando pros lados várias vezes; a barra alarga, rugas de tensão horizontais, volta. Nunca levantar a peça para esticar.
 - Trechos de **2–4 s** no resultado final (2,4 / 3,8 / 2,0 / 2,9 / 1,1 no jacket, 12 s total).
 - Trechos de **2,5–6 s**. Nunca cortar uma ação no meio; corte só ENTRE ações. Trecho de 1 s só no final.
