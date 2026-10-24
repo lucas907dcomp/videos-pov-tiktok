@@ -46,6 +46,10 @@ Estrutura de vídeo viral + narração edge-tts + legenda palavra por palavra. A
 ## Estilo de corte (regra do Lucas, 2026-10-23 — vale para TODOS os estilos)
 Medido no vídeo da jaqueta que vendeu (12,2 s): só **4 trechos longos**, cada ação completa antes de trocar:
 abrir pacote 2,4 s → deitar + alisar + esticar de leve 5,8 s (sem corte no meio) → aproximar da câmera e esfregar o tecido 2,9 s → tirar 1,1 s.
+- **Velocidade medida no vídeo da jaqueta: 1.4–1.5x em todos os trechos (usar 1.45x).** 1.25x fica lento. (Medido casando quadro a quadro o postado com os takes originais: `velocidade.py` no scratchpad / pasta da jaqueta.)
+- **Gancho = já na ação no quadro 0**: cortar o começo parado do take (no jacket, o take do pacote entra em 0,7 s, já rasgando). No "jogar", entrar quando as peças já estão no ar.
+- **Esticar certo** (o que vende): peça DEITADA na cama, mãos nas duas pontas da barra, puxando pros lados várias vezes; a barra alarga, rugas de tensão horizontais, volta. Nunca levantar a peça para esticar.
+- Trechos de **2–4 s** no resultado final (2,4 / 3,8 / 2,0 / 2,9 / 1,1 no jacket, 12 s total).
 - Trechos de **2,5–6 s**. Nunca cortar uma ação no meio; corte só ENTRE ações. Trecho de 1 s só no final.
 - O close na logo/tecido precisa de tempo (≥ 2,5 s) para dar pra ver a mão passando.
 - Jogar na cama: se o vídeo tem 2 peças, **jogar as duas juntas** num movimento só (nunca uma e depois a outra).
