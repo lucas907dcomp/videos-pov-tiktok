@@ -43,6 +43,19 @@ Estrutura de vídeo viral + narração edge-tts + legenda palavra por palavra. A
 | T9 | **Tapar a câmera** com a palma | Animar (card 8) | Transição / final alternativo |
 | T10 | **Tecido de perto**: leva a peça à câmera e passa os dedos | Animar (card 15) | Tecido premium |
 
+## Estilo de corte (regra do Lucas, 2026-10-23 — vale para TODOS os estilos)
+Medido no vídeo da jaqueta que vendeu (12,2 s): só **4 trechos longos**, cada ação completa antes de trocar:
+abrir pacote 2,4 s → deitar + alisar + esticar de leve 5,8 s (sem corte no meio) → aproximar da câmera e esfregar o tecido 2,9 s → tirar 1,1 s.
+- Trechos de **2,5–6 s**. Nunca cortar uma ação no meio; corte só ENTRE ações. Trecho de 1 s só no final.
+- O close na logo/tecido precisa de tempo (≥ 2,5 s) para dar pra ver a mão passando.
+- Jogar na cama: se o vídeo tem 2 peças, **jogar as duas juntas** num movimento só (nunca uma e depois a outra).
+- Sempre ter a **esticadinha de vai e volta** (T4) e o **aproximar da câmera + passar a mão no tecido** (T10).
+- Revisão: olhar o take de tirar/jogar a **6 fps**; deformação de peça (derreter, torcer) reprova o take, não dá pra deixar passar.
+- Legenda: variar a frase a cada vídeo (banco abaixo); não repetir a do vídeo base.
+
+## Banco de legendas (tom de amigo, sem preço; girar)
+"Irmão essa aqui é braba demais" · "Essa aqui é padrão ein" · "Essa tá padrão demais e no precinho de amigo" · "Essa aqui merece um lugar no teu guarda roupa" · "Irmão essa aqui é selecionada" · "Olha o nível dessa aqui irmão" · "Essa não sai do meu corpo" · "Treino, rolê, trabalho… essa vai em tudo" · "Tecido gelado que não marca suor" · "Essa aqui chegou e eu já pedi outra" · "Quem viu essa aqui não esquece" · "Tá ligado na qualidade dessa?"
+
 ## Como escolher os takes (raciocínio a cada produto)
 - Tecido elástico (dry fit, compressão, legging, poliamida) → T3 ou T4.
 - Estampa/logo forte → T5 + T6.
