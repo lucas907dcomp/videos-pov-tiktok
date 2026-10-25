@@ -49,7 +49,7 @@ Erro cometido de 20 a 24/10: os takes do estilo Lucena foram gerados com prompts
 - Mudar SÓ o que a "Adaptação masculina" do SKILL.md permite (mão, luva, relógio, cenário, nome da peça). Nada de reescrever ação, ritmo ou física.
 - Prompt próprio só para o que não existe na biblioteca (ex.: zíper T7), e dizendo ao Lucas que é próprio.
 
-## Estilo de corte## Estilo de corte (regra do Lucas, 2026-10-23 — vale para TODOS os estilos)
+## Estilo de corte (regra do Lucas, 2026-10-23 — vale para TODOS os estilos)
 Medido no vídeo da jaqueta que vendeu (12,2 s): só **4 trechos longos**, cada ação completa antes de trocar:
 abrir pacote 2,4 s → deitar + alisar + esticar de leve 5,8 s (sem corte no meio) → aproximar da câmera e esfregar o tecido 2,9 s → tirar 1,1 s.
 - **Velocidade medida no vídeo da jaqueta: 1.4–1.5x em todos os trechos (usar 1.45x).** 1.25x fica lento. (Medido casando quadro a quadro o postado com os takes originais: `velocidade.py` no scratchpad / pasta da jaqueta.)

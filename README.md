@@ -22,6 +22,10 @@ Precisa só de: Claude Code logado, Google Chrome com a extensão Claude in Chro
 2. Peça para o usuário reiniciar o Claude Code (o plugin carrega no início da sessão) e dizer "vamos começar".
 3. Na sessão nova, a skill `videos-pov-tiktok-shop` faz o resto, começando pela seção "Primeira vez nesta máquina".
 
+## Economia de tokens (desde a v1.4.0)
+
+Conversa longa relê o histórico inteiro a cada mensagem, e isso gasta tokens rápido. O plugin avisa quando a sessão passa de 250k tokens. Aí é só dizer "trocar de sessão": o Claude grava onde parou em `~/.claude/handoffs/` e te dá duas linhas para colar (`/clear` e `continuar handoff <nome>`). A sessão nova continua de onde parou.
+
 ## Atualizar
 
 O Lucas publica melhorias aqui. Para receber:
